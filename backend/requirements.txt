@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlmodel
+pydantic
+scikit-learn
+numpy
+pandas
+python-multipart
+httpx
+reportlab
+python-docx
+pytest

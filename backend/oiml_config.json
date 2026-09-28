@@ -1,0 +1,157 @@
+{
+  "_comment": "OIML R 76-1 metrological rules. Every value carries verified:false until cross-checked against the official OIML R 76-1:2006/AMD 1:2018 text. Do NOT promote verified to true without citing the exact clause and page number.",
+  "version": "R76-1:2006+AMD1:2018",
+  "effective_date": "2018-01-01",
+  "loaded_by": "oiml_engine.py",
+
+  "accuracy_classes": {
+    "accepted_values": ["I", "II", "III", "IIII"],
+    "_note": "OIML uses IIII (four Roman-numeral I's) for the lowest class. The previous code used 'IV' — both are accepted by the validator but IIII is canonical.",
+    "verified": false
+  },
+
+  "mpe_tables": {
+    "_clause": "R76-1 Table 2 (assumed — VERIFY BEFORE PRODUCTION)",
+    "verified": false,
+    "_note": "Each tier: max_n is the upper bound for n = load/e (null = infinity). mpe_factor multiplied by e gives the MPE. Values are for initial verification only.",
+    "initial_verification": {
+      "I":    [
+        {"max_n": 50000,  "mpe_factor": 0.5, "verified": false},
+        {"max_n": 200000, "mpe_factor": 1.0, "verified": false},
+        {"max_n": null,   "mpe_factor": 1.5, "verified": false}
+      ],
+      "II":   [
+        {"max_n": 500,    "mpe_factor": 0.5, "verified": false},
+        {"max_n": 2000,   "mpe_factor": 1.0, "verified": false},
+        {"max_n": null,   "mpe_factor": 1.5, "verified": false}
+      ],
+      "III":  [
+        {"max_n": 500,    "mpe_factor": 0.5, "verified": false},
+        {"max_n": 2000,   "mpe_factor": 1.0, "verified": false},
+        {"max_n": null,   "mpe_factor": 1.5, "verified": false}
+      ],
+      "IIII": [
+        {"max_n": 50,     "mpe_factor": 0.5, "verified": false},
+        {"max_n": 200,    "mpe_factor": 1.0, "verified": false},
+        {"max_n": null,   "mpe_factor": 1.5, "verified": false}
+      ]
+    }
+  },
+
+  "in_service_factor": {
+    "_clause": "R76-1 §3.5.1 (assumed — VERIFY)",
+    "value": 2.0,
+    "verified": false,
+    "_note": "In-service MPE = initial MPE × this factor. Must be confirmed against R76-1 §3.5.1."
+  },
+
+  "class_limits": {
+    "_clause": "R76-1 Table 1 (assumed — VERIFY)",
+    "verified": false,
+    "_note": "n_min / n_max = min / max number of verification intervals (= Max/e). e constraints are in the instrument's unit (gram-basis shown). All values need official document verification.",
+    "I": {
+      "n_min": 50000,
+      "n_max": null,
+      "e_min_mg": 1,
+      "e_max_g": null,
+      "verified": false
+    },
+    "II": {
+      "n_min": 100,
+      "n_max": 100000,
+      "e_min_mg": 1,
+      "e_max_g": 50,
+      "verified": false
+    },
+    "III": {
+      "n_min": 100,
+      "n_max": 10000,
+      "e_min_g": 0.1,
+      "e_max_g": null,
+      "verified": false
+    },
+    "IIII": {
+      "n_min": 100,
+      "n_max": 1000,
+      "e_min_g": 5,
+      "e_max_g": null,
+      "verified": false
+    }
+  },
+
+  "interval_relation": {
+    "_clause": "R76-1 §3.2 (assumed — VERIFY)",
+    "rule": "d <= e",
+    "_note": "The verification interval d must be less than or equal to the scale interval e. For Classes III and IIII d = e is common. For Classes I and II, d may equal e × 10^k where k is a non-positive integer.",
+    "verified": false
+  },
+
+  "repeatability": {
+    "_clause": "R76-1 §3.6.1 (assumed — VERIFY)",
+    "max_span_multiples_of_e": 1,
+    "verified": false,
+    "_note": "The span of n repeated indications at the same load must not exceed 1e."
+  },
+
+  "creep": {
+    "_clause": "R76-1 §3.9 (assumed — VERIFY)",
+    "max_drift_multiples_of_e": 0.5,
+    "test_duration_minutes": 30,
+    "verified": false,
+    "_note": "After applying Max load, indication drift over 30 min must not exceed 0.5e."
+  },
+
+  "thermal": {
+    "_clause": "R76-1 T.3.3 (assumed — VERIFY)",
+    "max_error_change_per_5c_multiples_of_e": 1.0,
+    "verified": false,
+    "_note": "Change of indication per 5 °C must not exceed 1e."
+  },
+
+  "discrimination": {
+    "_clause": "R76-1 §3.7 (assumed — VERIFY)",
+    "required_indication_change_multiples_of_d": 1,
+    "verified": false,
+    "_note": "Adding a small weight equal to d/10 to the load should cause a detectable change of at least d in the indication. This is a simplified interpretation — VERIFY the exact R76-1 §3.7 procedure."
+  },
+
+  "tare": {
+    "_clause": "R76-1 §3.8 (assumed — VERIFY)",
+    "verified": false,
+    "_note": "Tare device must not reduce the metrological characteristics. MPE applies to the net result with tare applied. Exact procedure needs verification."
+  },
+
+  "zero_setting": {
+    "_clause": "R76-1 §3.4 (assumed — VERIFY)",
+    "verified": false,
+    "_note": "Zero-setting range and zero-tracking stability. Max automatic zero-tracking rate assumed 0.5e per second — VERIFY."
+  },
+
+  "sensitivity": {
+    "_clause": "R76-1 §3.7.2 (assumed — VERIFY)",
+    "verified": false,
+    "_note": "Minimum additional load that causes a detectable change in indication. Threshold of response test."
+  },
+
+  "environment": {
+    "_clause": "R76-1 §4.1.1 (assumed — VERIFY)",
+    "temp_reference_c": 20.0,
+    "temp_warning_min_c": 15.0,
+    "temp_warning_max_c": 25.0,
+    "verified": false,
+    "_note": "Temperature outside warning range triggers an advisory warning, NOT rejection. The test may proceed but the deviation is recorded on the session and report."
+  },
+
+  "required_test_modules": {
+    "_note": "Modules that must ALL pass for overall_status to be 'pass'. If any is missing, status is 'pending'.",
+    "type_evaluation": ["weighing", "eccentricity", "repeatability"],
+    "verification": ["weighing"],
+    "verified": false
+  },
+
+  "report": {
+    "issuing_authority": "Regional Reference Standards Laboratory",
+    "standard_reference": "OIML R 76-1:2006/AMD 1:2018",
+    "legal_reference": "Legal Metrology Act, 2009 & Legal Metrology (General) Rules, 2011"
+  }
+}

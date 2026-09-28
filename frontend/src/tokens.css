@@ -1,0 +1,163 @@
+/*
+ * MetrologiX Design Tokens — Light Mode with Multi-Color System
+ * =============================================================
+ * Clean white base with a vibrant, intentional multi-color palette.
+ * Inspired by Linear, Stripe, Vercel — visually calm yet expressive.
+ */
+
+:root {
+  /* ─── Base Backgrounds ─────────────────────────────────── */
+  --color-base:        #f8f9fc;   /* Page background (warm white)  */
+  --color-surface-0:   #ffffff;   /* Sidebar, header               */
+  --color-surface-1:   #ffffff;   /* Cards (elevation 1)           */
+  --color-surface-2:   #f3f4f8;   /* Raised panels (elevation 2)   */
+  --color-surface-3:   #eceef4;   /* Hover / active rows           */
+  --color-surface-4:   #e4e7f0;   /* Pressed / selected            */
+
+  /* ─── Borders ──────────────────────────────────────────── */
+  --color-border-subtle:  rgba(0, 0, 0, 0.06);
+  --color-border-default: rgba(0, 0, 0, 0.10);
+  --color-border-strong:  rgba(0, 0, 0, 0.18);
+  --color-border-accent:  rgba(99, 102, 241, 0.40);
+
+  /* ─── Multi-Color Accent Palette ───────────────────────── */
+  /* Primary — Indigo/Violet */
+  --color-primary:         #6366f1;
+  --color-primary-hover:   #4f46e5;
+  --color-primary-light:   #818cf8;
+  --color-primary-bg:      rgba(99, 102, 241, 0.08);
+  --color-primary-border:  rgba(99, 102, 241, 0.25);
+  --color-primary-text:    #4338ca;
+
+  /* Sky / Cyan — data, measurements */
+  --color-accent:          #0ea5e9;
+  --color-accent-hover:    #0284c7;
+  --color-accent-bg:       rgba(14, 165, 233, 0.08);
+  --color-accent-border:   rgba(14, 165, 233, 0.25);
+  --color-accent-text:     #0369a1;
+
+  /* Purple — AI/ML engine */
+  --color-purple:          #8b5cf6;
+  --color-purple-hover:    #7c3aed;
+  --color-purple-bg:       rgba(139, 92, 246, 0.08);
+  --color-purple-border:   rgba(139, 92, 246, 0.25);
+  --color-purple-text:     #6d28d9;
+
+  /* Pink — Certification, vault */
+  --color-pink:            #ec4899;
+  --color-pink-bg:         rgba(236, 72, 153, 0.08);
+  --color-pink-border:     rgba(236, 72, 153, 0.25);
+  --color-pink-text:       #be185d;
+
+  /* Teal — Instruments */
+  --color-teal:            #14b8a6;
+  --color-teal-bg:         rgba(20, 184, 166, 0.08);
+  --color-teal-border:     rgba(20, 184, 166, 0.25);
+  --color-teal-text:       #0f766e;
+
+  /* Orange — KPIs, sessions */
+  --color-orange:          #f97316;
+  --color-orange-bg:       rgba(249, 115, 22, 0.08);
+  --color-orange-border:   rgba(249, 115, 22, 0.25);
+  --color-orange-text:     #c2410c;
+
+  /* ─── Text Hierarchy ────────────────────────────────────── */
+  --color-text-primary:   #0f1117;   /* Main headings, values       */
+  --color-text-secondary: #52566b;   /* Labels, descriptions        */
+  --color-text-tertiary:  #9ea3b8;   /* Placeholders, disabled      */
+  --color-text-accent:    #6366f1;   /* Links, active states        */
+  --color-text-inverse:   #ffffff;   /* On filled dark buttons      */
+
+  /* ─── Semantic: Success (emerald) ──────────────────────── */
+  --color-success:         #10b981;
+  --color-success-bg:      rgba(16, 185, 129, 0.08);
+  --color-success-border:  rgba(16, 185, 129, 0.25);
+  --color-success-text:    #065f46;
+  --color-success-strong:  #059669;
+
+  /* ─── Semantic: Warning (amber) ────────────────────────── */
+  --color-warning:         #f59e0b;
+  --color-warning-bg:      rgba(245, 158, 11, 0.08);
+  --color-warning-border:  rgba(245, 158, 11, 0.25);
+  --color-warning-text:    #92400e;
+
+  /* ─── Semantic: Error (rose) ─────────────────────────────  */
+  --color-error:           #ef4444;
+  --color-error-bg:        rgba(239, 68, 68, 0.08);
+  --color-error-border:    rgba(239, 68, 68, 0.25);
+  --color-error-text:      #991b1b;
+
+  /* ─── Semantic: Info (blue) ──────────────────────────────  */
+  --color-info:            #3b82f6;
+  --color-info-bg:         rgba(59, 130, 246, 0.08);
+  --color-info-border:     rgba(59, 130, 246, 0.25);
+  --color-info-text:       #1d4ed8;
+
+  /* ─── Indigo (alias for component use) ───────────────────  */
+  --color-indigo:          #6366f1;
+  --color-indigo-bg:       rgba(99, 102, 241, 0.08);
+  --color-indigo-border:   rgba(99, 102, 241, 0.25);
+
+  /* ─── Corner Radii ──────────────────────────────────────── */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  20px;
+  --radius-full: 9999px;
+
+  /* ─── Shadows — Soft light-mode elevation ───────────────── */
+  --shadow-xs:  0 1px 2px rgba(0,0,0,0.05);
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg:  0 8px 24px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.04);
+  --shadow-xl:  0 20px 40px rgba(0,0,0,0.10), 0 8px 16px rgba(0,0,0,0.06);
+  --shadow-focus: 0 0 0 3px rgba(99, 102, 241, 0.25);
+  --shadow-colored-blue:   0 4px 14px rgba(99,102,241,0.25);
+  --shadow-colored-green:  0 4px 14px rgba(16,185,129,0.20);
+  --shadow-colored-purple: 0 4px 14px rgba(139,92,246,0.25);
+
+  /* ─── Typography ────────────────────────────────────────── */
+  /* Three-font system */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', ui-monospace, 'Cascadia Code', monospace;
+
+  /* Backward-compat alias — existing var(--font-sans) inline styles keep working */
+  --font-sans:    var(--font-body);
+
+  --text-2xs:  10px;
+  --text-xs:   11px;
+  --text-sm:   13px;
+  --text-base: 14px;
+  --text-lg:   16px;
+  --text-xl:   18px;
+  --text-2xl:  22px;
+  --text-3xl:  28px;
+  --text-4xl:  36px;
+
+  /* ─── Spacing (4/8px grid) ──────────────────────────────── */
+  --space-0:  0px;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ─── Motion ────────────────────────────────────────────── */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ─── KPI Color Assignments ─────────────────────────────── */
+  --kpi-1: var(--color-primary);
+  --kpi-2: var(--color-purple);
+  --kpi-3: var(--color-success-strong);
+  --kpi-4: var(--color-orange);
+}
